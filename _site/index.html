@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/assets/css/style.css?v=d07d72355b93beb3027cbaddcfa9dc3bf600e671">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup theme-color -->
+<!-- start theme color meta headers -->
+<meta name="theme-color" content="#151515">
+<meta name="msapplication-navbutton-color" content="#151515">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- end theme color meta headers -->
+
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Gearing up for GSoC 2023 | March 23, 2023</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Gearing up for GSoC 2023" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="March 23, 2023" />
+<meta property="og:description" content="March 23, 2023" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Gearing up for GSoC 2023" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Gearing up for GSoC 2023" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"March 23, 2023","headline":"Gearing up for GSoC 2023","name":"Gearing up for GSoC 2023","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <a id="a-title" href="/">
+          <h1>Gearing up for GSoC 2023</h1>
+        </a>
+        <h2>March 23, 2023</h2>
+
+        <section id="downloads">
+          
+          <a href="https://github.com/psankhe28/GSoC_2023" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <p>Hello, I am Pratiksha Sankhe from VJTI, Mumbai. This is the first time I’ll be applying for GSoC. After going through a vast array of Organisations and learning about their projects, I finally found “<em>Modularization of Components</em>” project of <strong>caMicroscope</strong> quite interesting.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>I joined Slack and began digging deeper into the projects. I completed the setup locally and began with the code challenge task mentioned under my project as well. I'm creating this blog to summarise my path of completing the code challenge task, as well as the hurdles I encountered and how I overcame them.</p>
+
+<h2 id="getting-warmed-up">Getting Warmed up</h2>
+<p>Code challenge task were provided under each project for new contributors to demonstrate their creativity, understanding of the project, and ability to execute on a project proposal. I too started understanding and implementing it.</p>
+
+<h3 id="1-building-camicroscope-and-running-it-locally">1. Building caMicroscope and running it locally</h3>
+<ul>
+  <li>First I followed the <a href="https://github.com/camicroscope/caMicroscope#hosted-setup">Getting Started</a> section on caMicroscope's repository, which involved installing it using docker. I was able to successfully build and test its working on my PC.
+  <li>Then, I started exploring the different pages and finding bugs in the pages of <a href="https://github.com/camicroscope/caMicroscope">caMicroscope</a> repository and <a href="https://github.com/camicroscope/camicroscope.github.io">camicroscope.github.io</a> repository.
+  <li>Following are the PRs that I have raised till date:
+      In <a href="https://github.com/camicroscope/camicroscope.github.io">camicroscope.github.io</a>:<br/>
+      ● <a href="https://github.com/camicroscope/camicroscope.github.io/pull/23">Scroll to top feature added</a><br/>
+      ● <a href="https://github.com/camicroscope/camicroscope.github.io/pull/23">Improved the Index and the Community Page</a><br/>
+      ● <a href="https://github.com/camicroscope/camicroscope.github.io/pull/27">Changed link of navbar</a><br/>
+      ● <a href="https://github.com/camicroscope/camicroscope.github.io/pull/28">Created README</a><br/><br/>
+    
+      In <a href="https://github.com/camicroscope/caMicroscope">caMicroscope</a>:<br/>
+      ● <a href="https://github.com/camicroscope/caMicroscope/pull/619">Landing page UI modified</a><br/>
+      ● <a href="https://github.com/camicroscope/caMicroscope/pull/620">Fixed UI of admin page</a><br/><br/>
+  </li>
+</ul>
+
+<h3 id="2-a-simple-webapp-demonstraing-web-components-using-react-storybook">2. A simple webapp demonstrating Web Components using storybook</h3>
+<ul>
+  <li>I started by going through the <a href="https://storybook.js.org/docs/react/get-started/install/">Getting Started</a> section on storybook's website, which included installing dependencies and documentation. I read through all of the documentation on the website and became acquainted with it.</li>
+  <li>To use storybook in a react application, I created a react-app and then installed the dependencies required for creating stories.</li>
+  <div class="language-plaintext highlighter-rouge">
+    <div class="highlight"><pre class="highlight"><code>npx storybook init
+  </code></pre></div></div>
+  <li>I decided to develop stories for 3 basic components namely Button, Input and Subscription components.
+  </li>
+  <li>My next target was to build story for button. I decided to do it similar to bootstrap. In bootstrap, by assigning some class, the button color changes, while the other CSS remains the same.</li>
+  <li>I considered variant which is given the value like primary, secondary, success, danger.
+  <div class="language-plaintext highlighter-rouge">
+    <div class="highlight"><pre class="highlight">Eg: <code>() => &lt;Button variant='primary'&gt;Primary&lt;/Button&gt;
+  </code></pre></div></div>
+  <li>Finally I got a good hand on it and created similar stories for input and subscription components.</li>
+  <li><a href="https://github.com/psankhe28/react-storybook-eg">GitHub</a></li>
+  <li><a href="https://storybook2023.netlify.app">Hosted application</a></li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="3-creating-web-components-using-html-css-and-javascript">3. Creating Web Components Using HTML, CSS and JavaScript</h3>
+<ul>
+  <li>First, I searched numerous blogs for alternatives to storybooks, and some of the blogs listed below were really helpful.<br/>
+    - <a href="https://kinsta.com/blog/web-components/">A Complete Introduction to Web Components in 2023</a><br/>
+    - <a href="https://www.grapecity.com/blogs/web-components-introduction-creating-custom-html-elements-2018">Web Components Introduction</a><br/>
+    - <a href="https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/">All the Ways to Make a Web Component</a><br/>
+    <br/>
+  <li>After reading about web components, I started working on Feather UI and initially creating button and navbar components and experimenting using utility classes.</li>
+  <li>Feather UI makes building experience effortless with collection of 97+ components and 33+ utility classes that cater to a wide variety of use-cases.
+  </li>
+  <li>The library is built using HTML, CSS and JavaScript only.</li>
+  <li>I began working on the other components after I was able to develop the above components.</li>
+  <li>
+  The components are easy to use and customize, with ready-made HTML-CSS components available.</li>
+  <li>Among the 16 components included are Alerts, Avatars, Badges, Buttons, Cards, Chips, Drawers, Grids, Images, Inputs, Lists, Modals, Navbars, Ratings, Sliders, and Toasts. These components can be used for various use-cases and are designed to be easy to use and customize. 
+  </li>
+  <li>In addition to wide range of UI components, the toolkit also includes 33+ utility classes that makes building UIs effortless. These utility classes are grouped into three main categories: Colors, Typography, and Utilities.</li>
+    <li> The Colors category includes classes for text and background colors, while the Typography category includes classes for font styles and sizes. The Utilities category includes various classes for positioning, spacing, and layout, as well as responsive classes that adapt to different screen sizes. </li>
+  <li><a href="https://github.com/psankhe28/feather-ui">GitHub</a></li>
+<li><a href="https://feather-ui-dev.netlify.app/">Hosted application</a></li>
+</ul>
+
+<p><br /></p>
+
+
+
+      </section>
+    </div>
+  </body>
+</html>
